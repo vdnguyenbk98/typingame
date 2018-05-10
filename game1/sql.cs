@@ -18,7 +18,7 @@ namespace game1
 
             kn.Open();
             
-            string sql = "select * from dbo.player";
+            string sql = "select * from dbo.player order by score";
             SqlCommand cm = new SqlCommand(sql, kn);
             SqlDataAdapter adap = new SqlDataAdapter(cm);
             DataTable table = new DataTable();
@@ -52,6 +52,7 @@ namespace game1
             string sql = "select COUNT(score) from dbo.player";
             SqlCommand command = new SqlCommand(sql, kn);
             a = int.Parse(command.ExecuteScalar().ToString());
+            kn.Close();
             return a;
 
         }

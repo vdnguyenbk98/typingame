@@ -37,14 +37,16 @@ namespace game1
         }
 
         private void ok_Click(object sender, EventArgs e)
-        {
-            kn.writedata(namePlayer, score);
-            if (kn.CountPlayer() > 10)
+        {if (namePlayer.Text != "")
             {
-                kn.deletebt();
+                kn.writedata(namePlayer, score);
+                if (kn.CountPlayer() > 10)
+                {
+                    kn.deletebt();
+                }
+                this.Close();
             }
-            this.Close();
-            }
+        }
 
         private void T_Load(object sender, EventArgs e)
         {
