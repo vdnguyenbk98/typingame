@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.namePlayer = new System.Windows.Forms.TextBox();
             this.ok = new System.Windows.Forms.Button();
             this.Cc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // namePlayer
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.namePlayer.Location = new System.Drawing.Point(60, 46);
+            this.namePlayer.Name = "namePlayer";
+            this.namePlayer.Size = new System.Drawing.Size(211, 20);
+            this.namePlayer.TabIndex = 0;
+            this.namePlayer.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ok
             // 
@@ -69,9 +69,10 @@
             this.ClientSize = new System.Drawing.Size(310, 135);
             this.Controls.Add(this.Cc);
             this.Controls.Add(this.ok);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.namePlayer);
             this.Name = "T";
             this.Text = "Nhập tên người chơi";
+            this.Load += new System.EventHandler(this.T_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox namePlayer;
         private System.Windows.Forms.Button ok;
         private System.Windows.Forms.Button Cc;
     }

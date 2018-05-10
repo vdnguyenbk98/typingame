@@ -13,29 +13,39 @@ namespace game1
     public partial class Form1 : Form
     {
         Label label1 = new Label();
-        
-        
+
+        datafff data = new datafff();
         int score = 0;
+        static int diemcong;
 
         public Form1()
         {
             InitializeComponent();
             panelMain.Controls.Add(label1);
             label1.Text = "Let's go";
-            label1.Font = new Font(label1.Font.Name,16,label1.Font.Style);
-            label1.Size = new Size(100, 30);
+            label1.Font = new Font(label1.Font.Name,20,label1.Font.Style);
+            label1.Size = new Size(200, 50);
+            label1.Location = new Point(panelMain.Width / 2-100, panelMain.Height /2-31);
             
             timer1.Stop();
             label1.Hide();
 
         }
          
-       
+      
+        void chuyenvitri()
+        {
+            Random rd = new Random();
+            int x = rd.Next(panelMain.Width - 108);
+            int y = rd.Next(panelMain.Height - 50);
+            label1.Location = new Point(x, y);
+            label1.Text = WordGenerator.GetRandomWord();
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             
             Random rd = new Random();
-            int x = rd.Next(panelMain.Width-50);
+            int x = rd.Next(panelMain.Width-108);
             int y = rd.Next(panelMain.Height-50);
             label1.Location = new Point(x, y);
             label1.Text = WordGenerator.GetRandomWord();
@@ -46,20 +56,27 @@ namespace game1
             }
             
         }
-
+     void tangdiem(int diemcong)
+        {
+            score = score + diemcong;
+        }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            try
+           try
             {
                 if ((e.KeyChar == label1.Text[0]) && (label1.Text != ""))
                 {
                     label1.Text = label1.Text.Substring(1);
                     
                 }
+                else
+                {
+                    //timer1.Tick += new EventHandler(chuyenvitri());
+                }
                 if (label1.Text == "")
                 {
-                    score++;
+                    score=score+diemcong;
                     label2.Text = score + "";
                     
                 }
@@ -79,13 +96,16 @@ namespace game1
             progressBar1.Value = 0;
             timer1.Stop();
             label1.Hide();
-            if (score >= 1)
+            if ((data.CountPlayer()<10)||( score > data.getplayer10()))
             {
                 T form2 = new T();
 
                 form2.fundata(this.label2);
                 form2.ShowDialog();
             }
+            
+            score = 0;
+            label2.Text = "0";
          }
         void StartGame()
         {
@@ -109,6 +129,7 @@ namespace game1
             
             timer1.Interval = cons.TimeLV1;
             StartGame();
+            diemcong = 1;
 
 
 
@@ -119,6 +140,7 @@ namespace game1
             
             timer1.Interval = cons.TimeLV2;
             StartGame();
+            diemcong = 2;
 
 
         }
@@ -129,7 +151,7 @@ namespace game1
             
             timer1.Interval = cons.TimeLV3;
             StartGame();
-
+            diemcong = 3;
 
 
         }
@@ -148,6 +170,12 @@ namespace game1
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void xemTop10ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            f.Show();
         }
     }
 }

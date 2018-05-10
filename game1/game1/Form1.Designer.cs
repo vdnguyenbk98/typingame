@@ -41,8 +41,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemTop10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMain.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -118,13 +118,12 @@
             // lblv1
             // 
             this.lblv1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblv1.AutoSize = true;
             this.lblv1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.lblv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblv1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblv1.Location = new System.Drawing.Point(125, 139);
+            this.lblv1.Location = new System.Drawing.Point(128, 139);
             this.lblv1.Name = "lblv1";
-            this.lblv1.Size = new System.Drawing.Size(108, 31);
+            this.lblv1.Size = new System.Drawing.Size(113, 31);
             this.lblv1.TabIndex = 0;
             this.lblv1.Text = "Level 1";
             this.lblv1.Click += new System.EventHandler(this.lblv1_Click_1);
@@ -166,18 +165,19 @@
             this.newGameToolStripMenuItem.Text = "NewGame";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
+            // xemTop10ToolStripMenuItem
+            // 
+            this.xemTop10ToolStripMenuItem.Name = "xemTop10ToolStripMenuItem";
+            this.xemTop10ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xemTop10ToolStripMenuItem.Text = "Xem top 10";
+            this.xemTop10ToolStripMenuItem.Click += new System.EventHandler(this.xemTop10ToolStripMenuItem_Click);
+            // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
-            // 
-            // xemTop10ToolStripMenuItem
-            // 
-            this.xemTop10ToolStripMenuItem.Name = "xemTop10ToolStripMenuItem";
-            this.xemTop10ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.xemTop10ToolStripMenuItem.Text = "Xem top 10";
             // 
             // Form1
             // 

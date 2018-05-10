@@ -9,3 +9,4 @@ C:\Users\Admin\source\repos\game1\game1\bin\Debug\game1.pdb
 C:\Users\Admin\source\repos\game1\game1\obj\Debug\game1.exe
 C:\Users\Admin\source\repos\game1\game1\obj\Debug\game1.pdb
 C:\Users\Admin\source\repos\game1\game1\obj\Debug\game1.T.resources
+C:\Users\Admin\source\repos\game1\game1\obj\Debug\game1.Form3.resources

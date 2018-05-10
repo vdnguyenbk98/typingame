@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace game1
 {
     public partial class T : Form
     {
+        datafff kn = new datafff(); 
+
         int score;
         public T()
         {
@@ -35,15 +38,17 @@ namespace game1
 
         private void ok_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != null)
+            kn.writedata(namePlayer, score);
+            if (kn.CountPlayer() > 10)
             {
-                using (StreamWriter r = new StreamWriter(Application.StartupPath + "\\dulieu.txt"))
-                {
-                    r.WriteLine(textBox1.Text + " " + score+ Environment.NewLine);
-                    
-                }
-                this.Close();
+                kn.deletebt();
             }
+            this.Close();
+            }
+
+        private void T_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
