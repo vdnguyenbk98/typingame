@@ -18,12 +18,13 @@ namespace game1
 
             kn.Open();
             
-            string sql = "select * from dbo.player order by score";
+            string sql = "select * from dbo.player order by score desc";
             SqlCommand cm = new SqlCommand(sql, kn);
             SqlDataAdapter adap = new SqlDataAdapter(cm);
             DataTable table = new DataTable();
             adap.Fill(table);
             data.DataSource = table;
+            kn.Close();
             
         }
         public void writedata(TextBox namePlayer,int score )
@@ -42,6 +43,7 @@ namespace game1
             string sql = "select top 1 score from dbo.player order by score";
             SqlCommand command = new SqlCommand(sql,kn);
             a = int.Parse(command.ExecuteScalar().ToString());
+            kn.Close();
             return a;
 
         }

@@ -56,10 +56,7 @@ namespace game1
             }
             
         }
-     void tangdiem(int diemcong)
-        {
-            score = score + diemcong;
-        }
+    
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -70,10 +67,8 @@ namespace game1
                     label1.Text = label1.Text.Substring(1);
                     
                 }
-                else
-                {
-                    //timer1.Tick += new EventHandler(chuyenvitri());
-                }
+                
+                
                 if (label1.Text == "")
                 {
                     score=score+diemcong;
@@ -96,7 +91,7 @@ namespace game1
             progressBar1.Value = 0;
             timer1.Stop();
             label1.Hide();
-            if ((data.CountPlayer()<10)||( score > data.getplayer10()))
+            if (((data.CountPlayer()<10)||( score > data.getplayer10()))&&score!=0)
             {
                 T form2 = new T();
 
