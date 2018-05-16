@@ -39,7 +39,6 @@
             this.namePlayer.Name = "namePlayer";
             this.namePlayer.Size = new System.Drawing.Size(211, 20);
             this.namePlayer.TabIndex = 0;
-            this.namePlayer.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ok
             // 
@@ -72,7 +71,7 @@
             this.Controls.Add(this.namePlayer);
             this.Name = "T";
             this.Text = "Nhập tên người chơi";
-            this.Load += new System.EventHandler(this.T_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

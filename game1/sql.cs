@@ -12,6 +12,7 @@ namespace game1
     class datafff
     {
         SqlConnection kn = new SqlConnection(@"Data Source=DESKTOP-VGNG2FP;Initial Catalog=game;Integrated Security=True");
+//hiển thị 10 người chơi cao điểm nhất
         public void viewtop(DataGridView data )
         {
 
@@ -27,6 +28,7 @@ namespace game1
             kn.Close();
             
         }
+        //nhập điểm người chơi
         public void writedata(TextBox namePlayer,int score )
         {
             kn.Open();
@@ -36,6 +38,7 @@ namespace game1
             kn.Close();
            
         }
+        //lấy ra điểm người chơi có điểm thấp nhất trong 10 người chơi đã lưu
         public int getplayer10()
         {
             int a;
@@ -47,6 +50,7 @@ namespace game1
             return a;
 
         }
+        //đếm số người chơi đã lưu
         public int CountPlayer()
         {
             int a;
@@ -58,6 +62,7 @@ namespace game1
             return a;
 
         }
+        //xóa người chơi ít điểm nhất
         public void deletebt()
         {
             kn.Open();

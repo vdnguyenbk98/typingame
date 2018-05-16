@@ -22,6 +22,7 @@ namespace game1
         {
             InitializeComponent();
             panelMain.Controls.Add(label1);
+            //định dạng lại label1
             label1.Text = "Let's go";
             label1.Font = new Font(label1.Font.Name,20,label1.Font.Style);
             label1.Size = new Size(200, 50);
@@ -81,10 +82,7 @@ namespace game1
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+      //kết thúc game
        
         void EndGame()
         {
@@ -111,13 +109,6 @@ namespace game1
             label1.Show();
 
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
 
         private void lblv1_Click_1(object sender, EventArgs e)
         {
@@ -150,7 +141,7 @@ namespace game1
 
 
         }
-
+        //new game
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EndGame();
@@ -161,17 +152,19 @@ namespace game1
             
 
         }
-
+        //exit game
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        //xem 10 người chơi cao điểm nhất
         private void xemTop10ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 f = new Form3();
             f.Show();
         }
+
+       
     }
 }
 

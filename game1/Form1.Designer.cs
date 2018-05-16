@@ -161,21 +161,21 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.newGameToolStripMenuItem.Text = "NewGame";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
             // xemTop10ToolStripMenuItem
             // 
             this.xemTop10ToolStripMenuItem.Name = "xemTop10ToolStripMenuItem";
-            this.xemTop10ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xemTop10ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.xemTop10ToolStripMenuItem.Text = "Xem top 10";
             this.xemTop10ToolStripMenuItem.Click += new System.EventHandler(this.xemTop10ToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -194,7 +194,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Game Typing";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();

@@ -21,21 +21,19 @@ namespace game1
         {
             InitializeComponent();
         }
+        //nhận score từ form 1
         public void fundata(Label label2)
         {
             score = Convert.ToInt32(label2.Text);
         }
-
+        //nút cancel
         private void Cc_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+       
+        //nút OK
         private void ok_Click(object sender, EventArgs e)
         {if (namePlayer.Text != "")
             {
@@ -48,9 +46,6 @@ namespace game1
             }
         }
 
-        private void T_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
